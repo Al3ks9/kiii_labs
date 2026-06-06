@@ -1,0 +1,14 @@
+name: Push Check
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show workspace contents
+        run: ls -l
